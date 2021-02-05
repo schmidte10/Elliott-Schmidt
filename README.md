@@ -23,17 +23,17 @@ Make sure that all of the GO files needed for the analysis are in the same folde
 ### Lets get started. 
 
 ```{r setwd, include=F}
-setwd("C:/Users/Elliott/OneDrive/PhD dissertation/Moises_coral_research/apoly") 
+setwd("PATH") 
 ```
 
-First you should set your working directory, although not shown here the working directory can be set by using the **setwd()** function in R and placing your PATH in quotations within the parenthesis. For example setwd("C:/Users/YourName/Folder/"). 
+First you should set your working directory, the working directory can be set by using the **setwd()** function in R and placing your PATH in quotations within the parenthesis. For example setwd("C:/Users/YourName/Folder/"). 
 
 Keep in mind that it will be easier for you if your GO files are located along the PATH (ex. PATH = "C:/Users/YourName/Folder/SubFolder/") with the go files located in the SubFolder
 
 #### Lets import our data!
 
 ```{r importing data, include=T, warning=F, message=F}
-temp = list.files(path = "./go_files/", pattern = "*.csv", full.names = F)
+temp = list.files(path = "./FOLDER-NAME/", pattern = "*.csv", full.names = F)
 ```
 
 The line of code above will make a list containing the names of the files in the folder that your GO files are stored. 
@@ -45,7 +45,7 @@ The line of code above will make a list containing the names of the files in the
 ```{r importing data pt2, include=T, warning=F, message=F}
 mycol <- c("X", "log2FoldChange")    
 dflist <- lapply(temp, function(f){ 
-  read.csv(paste0("./go_files/", f),row.names = NULL, colClasses = c("character",rep("numeric",6)))[mycol]
+  read.csv(paste0("./FOLDER-NAME/", f),row.names = NULL, colClasses = c("character",rep("numeric",6)))[mycol]
 }) 
 ```
 
