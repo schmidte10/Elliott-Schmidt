@@ -1,11 +1,8 @@
 # GO_MWU automation
 
----
-title: "Looping GO-MWU Code"
 author: "Elliott Schmidt"
 date: "05/02/2021"
-output: html_document
----
+
 ## Packages needed
 ```{r setup, include=T, warning=F, message=F}
 library(plyr)
