@@ -1,7 +1,7 @@
 # GO_MWU automation
 
-**Author: "Elliott Schmidt"**
-**date: "05/02/2021"**
+**Author: Elliott Schmidt**
+**date: 05/02/2021**
 
 ## Packages needed
 ```{r setup, include=T, warning=F, message=F}
