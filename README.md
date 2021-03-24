@@ -47,7 +47,7 @@ dflist <- lapply(temp, function(f){
 }) 
 ```
 
-The list of characters stored in **mycol** refers to the columns that I want the imported files to contain. I only care about these two columns and not the others. If you care about all the columns then feel free to ignore the command - and makes sure to remove it from the end of the lapply command on the line below! 
+The list of characters stored in **mycol** refers to the columns that I want the imported files to contain. I only care about the 'X' and 'log2FoldChance' columns and not the others. If you care about all the columns then feel free to ignore the command - and makes sure to remove it from the end of the lapply command on the line above! 
 
 The **lapply** function imports all the files in the go_files folder into a list called **dflist**. I don't want R to add a column containing **row.names** so I set it to equal **F**. **colClasses** tells R that the first column should be treated as a **character** string, while the next 6 columns should be treated as **numeric**. 
 
