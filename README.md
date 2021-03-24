@@ -49,7 +49,7 @@ dflist <- lapply(temp, function(f){
 
 The list of characters stored in **mycol** refers to the columns that I want the imported files to contain. I only care about the 'X' and 'log2FoldChance' columns and not the others. If you care about all the columns then feel free to ignore the command - and makes sure to remove it from the end of the lapply command on the line above! 
 
-The **lapply** function imports all the files in the go_files folder into a list called **dflist**. I don't want R to add a column containing **row.names** so I set it to equal **F**. **colClasses** tells R that the first column should be treated as a **character** string, while the next 6 columns should be treated as **numeric**. 
+The **lapply** function imports all the files in the go_files folder into a list called **dflist**. I don't want R to add a column containing **row.names** so I set it to equal **NULL**. **colClasses** tells R that the first column should be treated as a **character** string, while the next 6 columns should be treated as **numeric**. 
 
 Next up is a short **for** loop that will go over all the files in the **dflist** and remove rows where there are **NA's** in the **log2FoldChange** column. After the loop the first couple of rows are called to make sure that the loop worked, although if there were initially no **NA's** in the first couple rows you may need to fully call or view a dataframe.
 
